@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>CPU</title>
+</head>
+<body class='body'>
+
+  <div class="bg bg--bStart"></div>
+
+  <main>
+    <h1><span>CPU</span></h1>
+
+    <dl>
+      <dt>
+        <button class="btn btn--1" onclick="onClick(this)">
+          <h2>Motherboard <span>--></span></h2>
+          <p>Asus Z8NA-D6C Intel Tylesburg 24D LGA1366 ATX 48GB DDR3 Motherboard</p>
+        </button>
+      </dt>
+      <dd>
+        <ul>
+          <li>CPU: Dual Socket LGA1366, QPI upto 6.4GT/s; SupportsQuad-Core Intel Xeon X5500 Series (95W)</li>
+          <li>Quad-Core Intel Xeon E5500 Series (80W) Quad-Core Intel Xeon L5500 Series (60W/38W)</li>
+          <li>Chipset: Intel 5500 & ICH10R Memory:6x DDR3-1333/1066/800 DIMM,Triple Channel,Reg/Unbuffered, ECC/non ECC , Max Capacity 48GB(RDIMM)/24GB(UDIMM)</li>
+          <li>Slots: 1x PCI-Express x16 Slot(Support PCI-Express 2.0); 2x PCI-Express x8 Slot; 1x MIO Slot for Audio card; 1x PCI 32bit/33 MHz Slot</li>
+          <li>SATA: 6x SATA2 Ports, Support RAID 0, 1, 10, 5 Video: Aspeed AST2050, w/8MB DDR VRAM</li>
+          <li>LAN: 2x Intel 82574L Fast Ethernet Controller</li>
+          <li>Ports:4x USB 2.0 Ports (2 rear,1 by header,1 Type A USB connector);2x PS/2 Ports;2x Serial Ports (1 rear, 1 by header);1x VGA Port;2x RJ45 LAN Ports</li> 
+          <li>Power Connector: 24pin ATX & SSI power connector; 1x 8pin ATX & SSI 12V power connector</li>
+        </ul>
+      </dd>
+      <dt>
+        <button class="btn btn--2" onclick="onClick(this)">
+          <h2>Memoria Ram 20GB (5 * 4GB) <span>--></span></h2>
+          <p>Kingston ValueRAM 4GB 1333MHz DDR3 ECC Reg CL9 DIMM Dual Rank x8 1.35V Low Voltage Elpida C Desktop Memory</p>
+        </button>
+      </dt>
+      <dd>
+        <ul>
+          <li>One 4GB module of 1333MHz DDR3 Desktop Memory</li>
+          <li>Specifically designed and tested for compatibility in various makes and models of desktop computers</li>
+          <li>From the industry leader in PC memory</li>
+        </ul>
+      </dd>
+      <dt>
+        <button class="btn btn--3" onclick="onClick(this)">
+          <h2>Processor 2 <span>--></span></h2>
+          <p>Intel Xeon E5520 Processor 2.26 GHz 8 MB Cache Socket LGA1366</p>
+        </button>
+      </dt>
+      <dd>
+        <ul>
+          <li>Processor Type: Xeon DP</li>
+          <li>Processor Speed: 2.26 GHz</li>
+        </ul>
+      </dd>
+      <dt>
+        <button class="btn btn--4" onclick="onClick(this)">
+          <h2>Disco Duro</h2>
+          <p>Seagate Barracuda XT 2000 GB 7200RPM 64MB Cache 3.5-Inch Bare Drive - ST32000641AS</p>
+        </button>
+      </dt>
+      <dd>
+        <ul>
+          <li>SATA 6gb/s interface enables the use of the industrys newest and fastest hadr drive controllers while providing backward compatibility</li>
+          <li>7200RPM performance platform complements high capacity, delivering a power combination of extreme storage and top-end desktop performance</li>
+          <li>Massive 2TB drive capacity provides plenty of room for downloading todays space-hungry PC games and movies</li>
+        </ul>
+      </dd>
+    </dl>
+  </main>
+  <script>
+    document.addEventListener("DOMContentLoaded", init);
+
+    function init () {
+      setTimeout( () =>  
+        document.body.classList.add('body--anima')
+        ,1000
+      )
+    }
+    function onClick (e){
+      document.querySelector("dd.show") && document.querySelector("dd.show").classList.remove('show');
+      const target = e.parentElement.nextElementSibling.classList.add('show');
+      const eleBg = document.querySelector('.bg');
+      eleBg.classList.replace(
+        eleBg.classList[1], `bg__${e.classList[1]}`
+      )
+      
+    }
+  </script>
+</body>
+</html>
