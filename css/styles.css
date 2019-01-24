@@ -1,0 +1,166 @@
+@font-face {
+  font-family: 'HUGEAvantGardeBold';
+  src: url("../fonts/huge_agb_v5-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/huge_agb_v5-webfont.woff") format("woff"), url("../fonts/huge_agb_v5-webfont.ttf") format("truetype"), url("../fonts/huge_agb_v5-webfont.svg#svgFontName") format("svg");
+}
+
+html,
+body{
+  height: 100%;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  position: relative;
+  background-color: #000;
+}
+
+body{
+  margin: 0;
+  font-family: 'HugeAvantGardeBold', Arial, Helvetica, sans-serif;
+}
+
+figure{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+img{
+  height: 100%;
+}
+
+main{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10vw;
+}
+
+h1{
+  font-size: 200px;
+  margin: 0;
+  color: white;
+}
+
+h1 span {
+  background-color: #000;
+}
+
+h2{
+  margin: 0;
+}
+
+h2 span {
+  color: #ff0000;
+}
+
+p{
+  margin: 0;
+}
+
+button{
+  background-color: #ececec;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #e3e3e3;
+}
+
+dl{
+  width: 40%;
+  margin: 0;
+  padding: 1vw;
+  background-color:rgba(255,255,255,.95);
+}
+
+dd{
+  margin: 0;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transition: height 0s, opacity 0s;
+}
+
+dt{
+  margin-bottom: 10px;
+}
+
+ul {
+  padding: 0;
+  font-family: Arial;
+  font-size: 14px;
+  margin: 10px 0 20px 20px;
+}
+
+li {
+  margin:5px 0;
+}
+
+.body--none{
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 10s .2s;
+}
+
+.body{
+  opacity: 0;
+  transition: opacity 0s 0s;
+}
+
+.body--anima{
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+
+.bg{
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height:	0;
+  position: absolute;
+  transition: height .2s .2s;
+}
+
+.bg--bStart{
+  background-image: url(../images/20190117112753940.jpg);
+}
+
+.bg__btn--1 {
+  background-image: url(../images/20190117112753998.jpg);
+}
+
+.bg__btn--2 {
+  background-image: url(../images/20190117112754019.jpg);
+}
+
+.bg__btn--3 {
+  background-image: url(../images/20190117112753960.jpg);
+}
+
+.bg__btn--4 {
+  background-image: url(../images/20190117112753978.jpg);
+}
+
+.show{
+  height: auto;
+  opacity: 1;
+  transition: height 1s, opacity 1s;
+}
+
+.body--anima .bg {
+  height: 100%;
+  transition: height 1s;
+}
